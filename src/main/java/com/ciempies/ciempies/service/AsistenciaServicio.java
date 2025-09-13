@@ -1,12 +1,12 @@
 package com.ciempies.ciempies.service;
 
-import com.ciempies.ciempies.modelo.Asistencia;
+import com.ciempies.ciempies.modelo.AsistenciaModel;
 import java.util.List;
 
 public interface AsistenciaServicio {
-    List<Asistencia> listarTodas();
-    Asistencia guardar(Asistencia asistencia);
-    Asistencia buscarPorId(Long id);
+    List<AsistenciaModel> listarTodas();
+    AsistenciaModel guardar(AsistenciaModel asistencia);
+    AsistenciaModel buscarPorId(Long id);
     void eliminar(Long id);
 }
 

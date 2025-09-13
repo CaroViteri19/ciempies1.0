@@ -1,6 +1,6 @@
 package com.ciempies.ciempies.service;
 
-import com.ciempies.ciempies.modelo.Asistencia;
+import com.ciempies.ciempies.modelo.AsistenciaModel;
 import com.ciempies.ciempies.repository.AsistenciaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,17 +14,17 @@ public class AsistenciaServicioImpl implements AsistenciaServicio {
     private AsistenciaRepository asistenciaRepository;
 
     @Override
-    public List<Asistencia> listarTodas() {
+    public List<AsistenciaModel> listarTodas() {
         return asistenciaRepository.findAll();
     }
 
     @Override
-    public Asistencia guardar(Asistencia asistencia) {
+    public AsistenciaModel guardar(AsistenciaModel asistencia) {
         return asistenciaRepository.save(asistencia);
     }
 
     @Override
-    public Asistencia buscarPorId(Long id) {
+    public AsistenciaModel buscarPorId(Long id) {
         return asistenciaRepository.findById(id).orElse(null);
     }
 
